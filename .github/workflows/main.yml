@@ -1,0 +1,19 @@
+name: Run script on new commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run script
+      run: |
+        pip install requests
+        python newEvalScript.py "${{ env.GITHUB_SHA }}"
