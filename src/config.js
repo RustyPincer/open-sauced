@@ -7,6 +7,7 @@ const auth = new OneGraphAuth({
 });
 
 
+
 // This setup is only needed once per application
 const fetchOneGraph = (operationsDoc, operationName, variables) => {
   return fetch(
