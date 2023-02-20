@@ -1,0 +1,59 @@
+2023-02-20 18:00:53 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:53 backend   | INFO:index: Processing POST toe request...
+2023-02-20 18:00:53 backend   | INFO:index: successfully inserted toe.
+2023-02-20 18:00:53 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "POST /toe HTTP/1.1" 200 41
+2023-02-20 18:00:53 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:53 backend   | INFO:index: Processing POST evaluation request...
+2023-02-20 18:00:54 backend   | INFO:index: Adding INITIAL evaluation...
+2023-02-20 18:00:54 backend   | INFO:index: Creating folder for evaluation:
+2023-02-20 18:00:54 backend   | INFO:index: successfully created folder for evaluation.
+2023-02-20 18:00:54 backend   | INFO:index: successfully inserted INITIAL evaluation.
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "POST /evaluation HTTP/1.1" 200 41
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "POST /report HTTP/1.1" 200 5
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:54 backend   | INFO:index: Processing GET requirement request...
+2023-02-20 18:00:54 backend   | INFO:index: Getting requirements of specified projectId...
+2023-02-20 18:00:54 backend   | INFO:index: successfully fetched requirement from of projectId.
+2023-02-20 18:00:54 backend   | DEBUG:index: Sending back success response with requirements array.
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "GET /requirement?projectId=1 HTTP/1.1" 200 6983
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:54 backend   | INFO:index: Processing GET assessment request...
+2023-02-20 18:00:54 backend   | INFO:index: Get all assessments...
+2023-02-20 18:00:54 backend   | INFO:index: successfully fetched assessments.
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "GET /assessment HTTP/1.1" 200 17212
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5000
+2023-02-20 18:00:54 backend   | INFO:index: Processing GET evidence request...
+2023-02-20 18:00:54 backend   | Traceback (most recent call last):
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2548, in __call__
+2023-02-20 18:00:54 backend   |     return self.wsgi_app(environ, start_response)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+2023-02-20 18:00:54 backend   |     response = self.handle_exception(e)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+2023-02-20 18:00:54 backend   |     return cors_after_request(app.make_response(f(*args, **kwargs)))
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_restful/__init__.py", line 271, in error_router
+2023-02-20 18:00:54 backend   |     return original_handler(e)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+2023-02-20 18:00:54 backend   |     response = self.full_dispatch_request()
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+2023-02-20 18:00:54 backend   |     rv = self.handle_user_exception(e)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+2023-02-20 18:00:54 backend   |     return cors_after_request(app.make_response(f(*args, **kwargs)))
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_restful/__init__.py", line 271, in error_router
+2023-02-20 18:00:54 backend   |     return original_handler(e)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+2023-02-20 18:00:54 backend   |     rv = self.dispatch_request()
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+2023-02-20 18:00:54 backend   |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_restful/__init__.py", line 467, in wrapper
+2023-02-20 18:00:54 backend   |     resp = resource(*args, **kwargs)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask/views.py", line 107, in view
+2023-02-20 18:00:54 backend   |     return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+2023-02-20 18:00:54 backend   |     resp = meth(*args, **kwargs)
+2023-02-20 18:00:54 backend   |   File "/app/resources/evidence.py", line 181, in get
+2023-02-20 18:00:54 backend   |     elif bool(json.loads(isGetterInListFormat)['isGetterInListFormat']) and evaluationId and previousEvaluationId:
+2023-02-20 18:00:54 backend   |   File "/usr/local/lib/python3.10/json/__init__.py", line 339, in loads
+2023-02-20 18:00:54 backend   |     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+2023-02-20 18:00:54 backend   | TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+2023-02-20 18:00:54 backend   | DEBUG:urllib3.connectionpool:http://localhost:5000 "GET /evidence HTTP/1.1" 500 26859
