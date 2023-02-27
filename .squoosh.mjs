@@ -3,7 +3,6 @@ import execa from "execa";
 import glob from "glob";
 import pLimit from "p-limit";
 
-
 const limit = pLimit(3);
 const [globs] = process.argv.slice(2);
 const algo = {
